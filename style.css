@@ -1,0 +1,54 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #0d6efd; /* Azul do Bootstrap */
+}
+
+.card-title {
+    font-weight: bold;
+    color: #198754; /* Verde Bootstrap */
+}
+.card {
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    padding: 20px;
+}
+.card-header {
+    background-color: #e9ecef; /* Cinza claro do Bootstrap */
+    border-bottom: 1px solid #dee2e6;
+}
+.form-control {
+    border-radius: 5px;
+    box-shadow: none;
+}
+.form-control:focus {
+    border-color: #0d6efd; /* Azul do Bootstrap */
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+.btn-primary {
+    background-color: #0d6efd; /* Azul do Bootstrap */
+    border-color: #0d6efd;
+}
+.btn-primary:hover {
+    background-color: #0b5ed7; /* Azul escuro do Bootstrap */
+    border-color: #0a58ca;
+}   
+.btn-secondary {
+    background-color: #6c757d; /* Cinza do Bootstrap */
+    border-color: #6c757d;
+}
+.btn-secondary:hover {
+    background-color: #5c636a; /* Cinza escuro do Bootstrap */
+    border-color: #545b62;
+}
+.table {
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}

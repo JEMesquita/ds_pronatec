@@ -31,7 +31,7 @@ include('config.php');
         }
     }
 
-    $sql = "SELECT * FROM alunos ORDER BY nome";
+    $sql = "SELECT id, nome, matricula, email, telefone FROM alunos";
     $result = $conn->query($sql);
     if ($result && $result->num_rows > 0) {
         echo "<table class='table table-bordered'><thead class='table-light'><tr>
@@ -45,6 +45,8 @@ include('config.php');
                     <td>".htmlspecialchars($row["telefone"])."</td>
                     <td>
                         <a class='btn btn-danger btn-sm' href='listar.php?id=".$row["id"]."' onclick='return confirm(\"Deseja realmente excluir este aluno?\")'>Excluir</a>
+                        <a href='editar.php?id={$row['id']}' class='btn btn-warning btn-sm'>Editar</a>
+                        <a href='excluir.php?id={$row['id']}' class='btn btn-danger btn-sm'>Excluir</a>
                     </td>
                   </tr>";
         }
@@ -52,6 +54,8 @@ include('config.php');
     } else {
         echo "<div class='alert alert-warning'>Nenhum aluno cadastrado.</div>";
     }
+    // Fecha a conexão
+    $conn->close();
     ?>
     <a class="btn btn-secondary mt-3" href="index.php">Voltar à Home</a>
 </div>
